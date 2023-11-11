@@ -1,24 +1,17 @@
 # README
+## 概要
+DockerでRails with MySQLを使うためのテンプレートです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## バージョン
+- Ruby: 3.2.2
+- Rails: 6.1.7.X
+- MySQL: 8.0.35
 
-Things you may want to cover:
+## 動作
+- `docker compose build`でコンテナをビルドできます
+- `docker compose run app rails new . --force --database=mysql --skip-bundle`でアプリのファイル群を作ることができます
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## バージョンを変える
+- Rubyのバージョンを変えるときは、Dockerfileの`FROM`を変更します
+- Railsのバージョンを変えるときは、Gemfileの`gem 'rails'`の記述を変更します
+- MySQLのバージョンを変えるときは、docker-compose.ymlの`db:image`を変更します
