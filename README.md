@@ -9,7 +9,7 @@ DockerでRails with MySQLを使うためのテンプレートです。
 
 ## 動作
 - `docker compose build`でコンテナをビルドできます
-- `docker compose run app rails new . --force --database=mysql --skip-bundle`でアプリのファイル群を作ることができます
+- `docker compose run --rm app rails new . --force --database=mysql --skip-bundle`でアプリのファイル群を作ることができます
 
 ## バージョンを変える
 - Rubyのバージョンを変えるときは、Dockerfileの`FROM`を変更します
