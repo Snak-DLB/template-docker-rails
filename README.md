@@ -9,8 +9,7 @@ DockerでRails with MySQLを使うためのテンプレートです。
 
 ## コンテナの起動まで
 1. `docker compose build`でコンテナをビルドします
-1. `docker compose run --rm app rails new . --force --database=mysql`でアプリのファイル群を作ります
-  - READMEの内容が書き換わるので注意してください
+1. `docker compose run --rm app rails new . --force --database=mysql`でアプリのファイル群を作ります（READMEの内容が書き換わるので注意してください）
 1. config/database.ymlの`default: &default`内の`host`を`host: db`と書き換えてください
 1. `docker compose run --rm app rails db:create`でデータベースを作成します
 1. `docker compose up`で起動します
