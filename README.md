@@ -7,9 +7,12 @@ DockerでRails with MySQLを使うためのテンプレートです。
 - Rails: 6.1.7.X
 - MySQL: 8.0.35
 
-## 動作
-- `docker compose build`でコンテナをビルドできます
-- `docker compose run --rm app rails new . --force --database=mysql --skip-bundle`でアプリのファイル群を作ることができます
+## コンテナの起動まで
+1. `docker compose build`でコンテナをビルドできます
+1. `docker compose run --rm app rails new . --force --database=mysql`でアプリのファイル群を作ることができます
+  - READMEの内容が書き換わるので注意してください
+1. `docker compose run --rm app rails webpacker:install`でWebpacker関連の設定ができます
+1. `docker compose up`で起動できます
 
 ## バージョンを変える
 - Rubyのバージョンを変えるときは、Dockerfileの`FROM`を変更します
