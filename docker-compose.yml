@@ -22,7 +22,12 @@ services:
     depends_on:
       - db
   
-
+  test-browser:
+    container_name: rails-test-browser
+    image: selenium/standalone-chrome:latest
+    ports:
+      - 4444:4444
+    shm_size: 2gb
 
 volumes:
   mysql_db_volume:
